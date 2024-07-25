@@ -1,6 +1,6 @@
 package com.di.java.demo.javademo.rest;
 
-import com.di.java.demo.javademo.Vehicle;
+import com.di.java.demo.javademo.common.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -8,9 +8,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class VehicleController {
     private Vehicle myVehicle;
 
+//    @Autowired
+//    public VehicleController(Vehicle vehicle){
+//        myVehicle = vehicle;
+//    }
+
     @Autowired
-    public VehicleController(Vehicle vehicle){
-        myVehicle = vehicle;
+    public void setVehicle(Vehicle veh){
+        myVehicle = veh;
     }
 
     @GetMapping("/myvehicle")
