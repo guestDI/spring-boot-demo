@@ -11,7 +11,7 @@ public class VehicleController {
     private Vehicle myVehicle2;
 
     @Autowired
-    public VehicleController(@Qualifier("boat") Vehicle vehicle, @Qualifier("boat") Vehicle vehicle2){
+    public VehicleController(@Qualifier("moto") Vehicle vehicle, @Qualifier("boat") Vehicle vehicle2){
         myVehicle = vehicle;
         myVehicle2 = vehicle2;
     }
